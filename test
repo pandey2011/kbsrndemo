@@ -1,59 +1,54 @@
+<!DOCTYPE html>
 <html>
-<head>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Bistaify</title>
+    </head>
+    <body>
+        <!--Note-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div style="background: yellowgreen; padding: 5px;">
+            <h4>Resize Your Window to see the Responsive Effect</h4>
+        </div>
+        <!--Header-->
+        <div class="header">
+            <h1>Bistaify</h1>
+            <p>With Flex Layout</p>
+        </div>
 
-</head>
+        <!--Navigation Bar-->
+        <div class="navbar">
+          <a href="#">Home</a>
+          <a href="#">Profile</a>
+          <a href="#">Photos</a> 
+          <a href="#">Social Media</a>
+          <a href="#">Blog</a> 
+        </div>
+        <!--Flexible Grid (Content)-->
+        <div class="row">
+            <div class="side">
+                <h2>About Me</h2>
+                <h2>Photo of ME</h2>
+                <div class="fakeimg" style="height: 200px;">Image</div>
+                <p>Some text about this photo...</p>
+                <h3>More Text</h3>
+                <p>Here are some update about ....</p>
+                <div class="fakeimg" style="height: 60px;">Images</div><br>
+                <div class="fakeimg" style="height: 60px;">Images</div><br>
+                <div class="fakeimg" style="height: 60px;">Images</div>
+            </div>
+        <div class="main">
+            <h2>TITLE HEADING</h2>
+            <h5>Title Description, Baisakh 29,2078</h5>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Description</p>
+            <p>Above image Description is typed here,.....</p>
+        </div>
+        </div>
 
-<body>
-
-<script>
-
-var nums = [4,3,2,1,6,8,0,9];
-
-function doIt() {
-	var after = mergeSort( nums );
-	document.writeln(after);
-}
-
-function mergeSort(arr) {
-	var left, right;
-	if(arr.length() > 1) {
-		var middle = Math.floor( arr.length / 2 );
-		left = mergeSort( arr.splice(0, middle) );
-		right = mergeSort( arr );
-	} else  {
-		return arr;
-	}
-	merge(left, right);
-}
-
-function merge( left, right ) {
-	var num = left.length + right.length;
-	var leftPoint = 0, rightPoint = 0;
-	var result = [];
-	while( leftPoint < left.length && rightPoint < right.length  ) {
-		if(leftPoint >= left.length) {
-			result.push( right[rightPoint] )
-			rightPoint++;
-		} else if( rightPoint >= right.length ) {
-			result.push( left[leftPoint] );
-			leftPoint++;
-		} else {
-			if( left[leftPoint] < right[rightPoint] ) {
-				result.push( left[leftPoint] );
-				leftPoint++;
-			} else {
-				result.push( right[rightPoint] );
-				rightPoint++;
-			}
-		}
-		
-	}
-}
-
-</script>
-
-<a href='#' onclick='doIt()'>test</a>
-
-</body>
-
+        <!--Footer-->
+        <div class="footer">All Right reserved 2078, Bistaify
+            <h6>Thank You</h6>
+        </div>
+    </body>
 </html>
